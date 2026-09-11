@@ -2,7 +2,6 @@ node_modules/
 dist/
 dist.zip
 *.local
+*.log
 .DS_Store
 .vite/
-deploy.log
-deploy-*.log
