@@ -3,13 +3,15 @@
 #
 # Usage (from project root, normal PowerShell):
 #   npm run build
-#   $env:DEPLOY_PASS = "<server password>"
 #   powershell -NoProfile -ExecutionPolicy Bypass -File deploy-now.ps1
+#
+# The server password is baked in below so anyone can deploy with one command.
+# Override it with:  $env:DEPLOY_PASS = "xxx"
 
 param(
   [string]$Server = '1.13.245.73',
   [string]$User = 'Administrator',
-  [string]$Password = $env:DEPLOY_PASS,
+  [string]$Password = $(if ($env:DEPLOY_PASS) { $env:DEPLOY_PASS } else { '!Gxy55668760' }),
   [string]$SiteRoot = 'C:\inetpub\wwwroot',
   [string]$LocalDist = 'dist'
 )
