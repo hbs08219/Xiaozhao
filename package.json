@@ -1,0 +1,25 @@
+{
+  "name": "xiaozhao-wedding-prep",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "备婚手册 · 我们一起准备",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "deploy": "powershell -NoProfile -ExecutionPolicy Bypass -File deploy-now.ps1"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.3"
+  }
+}
